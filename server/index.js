@@ -16,12 +16,11 @@ const {CONNECTION_STRING, SESSION_SECRET} = process.env
 
 massive({
     connectionString: CONNECTION_STRING,
-    ssl: {rejectUnauthorized: false}
-}).then(dbInstance => {
-    app.set('db', dbInstance); //the first argument is how we reference it, the second is the actual value which is the database
+    ssl: { rejectUnauthorized: false }
+  }).then(db => {
+    app.set('db', db);
     console.log('db connected');
-    
-})
+  });
 
 
 app.use(

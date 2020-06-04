@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS users;
 
-CREATE TABLE users
+CREATE TABLE users1
 (
   id SERIAL PRIMARY KEY,
   is_admin BOOLEAN default false,
@@ -8,7 +8,7 @@ CREATE TABLE users
   hash text
 );
 
-INSERT INTO users
+INSERT INTO users1
 (is_admin, username, hash)
 VALUES
 (true, 'Trogdor', '$2a$10$wZUxoi7vsBOeHK3zhiY4H.Nc5WvuyukqmsGjat9XMGl40w3/RhdiW'),
